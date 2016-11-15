@@ -1,0 +1,43 @@
+*productosLiquidos
+	idproductoL
+	nombre
+	cantidad (unidades en Ltrs)
+	precio
+	
+*productosPiezas
+	idproductoP
+	nombre
+	piezas
+	precio
+*compras
+	idcompra
+	nombre_PL
+	nombre_PP
+	cantidad
+	piezas
+	precio
+	total
+	fecha	
+*ventas
+	idventa
+	nombre_PL
+	nombre_PP
+	cantidad
+	piezas
+	precio
+	total
+	fecha
+	
+*utilidad
+	idultilidad
+	totalC
+	totalV
+	total
+	
+*inventario
+	idinventario
+	nombre_PL
+	nombre_PP
+	cantidad
+	piezas
+	
