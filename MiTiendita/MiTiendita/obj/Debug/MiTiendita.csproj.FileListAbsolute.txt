@@ -1,0 +1,11 @@
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\bin\Debug\MiTiendita.exe.config
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\bin\Debug\MiTiendita.exe
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\bin\Debug\MiTiendita.pdb
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.csprojResolveAssemblyReference.cache
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Properties.Resources.resources
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.csproj.GenerateResource.Cache
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.exe
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.pdb
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Agregar.resources
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Principal.resources
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Buscar.resources

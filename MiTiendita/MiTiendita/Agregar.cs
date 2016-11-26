@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MiTiendita
 {
-    public partial class Form1 : Form
+    public partial class Agregar : Form
     {
-        public Form1()
+        public Agregar()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
