@@ -33,15 +33,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.TextBox();
-            this.Unidad = new System.Windows.Forms.TextBox();
-            this.Precio = new System.Windows.Forms.TextBox();
-            this.Cantidad = new System.Windows.Forms.TextBox();
+            this.NombreAgregar = new System.Windows.Forms.TextBox();
+            this.UnidadAgregar = new System.Windows.Forms.TextBox();
+            this.PrecioAgregar = new System.Windows.Forms.TextBox();
+            this.CantidadCantidad = new System.Windows.Forms.TextBox();
             this.Guardar = new System.Windows.Forms.Button();
             this.Salir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.TextBox();
+            this.IDAgregar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,33 +82,37 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Cantidad";
             // 
-            // Nombre
+            // NombreAgregar
             // 
-            this.Nombre.Location = new System.Drawing.Point(93, 76);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(144, 20);
-            this.Nombre.TabIndex = 5;
+            this.NombreAgregar.Location = new System.Drawing.Point(93, 76);
+            this.NombreAgregar.Name = "NombreAgregar";
+            this.NombreAgregar.Size = new System.Drawing.Size(144, 20);
+            this.NombreAgregar.TabIndex = 5;
+            this.NombreAgregar.TextChanged += new System.EventHandler(this.NombreAgregar_TextChanged);
             // 
-            // Unidad
+            // UnidadAgregar
             // 
-            this.Unidad.Location = new System.Drawing.Point(93, 122);
-            this.Unidad.Name = "Unidad";
-            this.Unidad.Size = new System.Drawing.Size(144, 20);
-            this.Unidad.TabIndex = 6;
+            this.UnidadAgregar.Location = new System.Drawing.Point(93, 122);
+            this.UnidadAgregar.Name = "UnidadAgregar";
+            this.UnidadAgregar.Size = new System.Drawing.Size(144, 20);
+            this.UnidadAgregar.TabIndex = 6;
+            this.UnidadAgregar.TextChanged += new System.EventHandler(this.UnidadAgregar_TextChanged);
             // 
-            // Precio
+            // PrecioAgregar
             // 
-            this.Precio.Location = new System.Drawing.Point(93, 170);
-            this.Precio.Name = "Precio";
-            this.Precio.Size = new System.Drawing.Size(100, 20);
-            this.Precio.TabIndex = 7;
+            this.PrecioAgregar.Location = new System.Drawing.Point(93, 170);
+            this.PrecioAgregar.Name = "PrecioAgregar";
+            this.PrecioAgregar.Size = new System.Drawing.Size(100, 20);
+            this.PrecioAgregar.TabIndex = 7;
+            this.PrecioAgregar.TextChanged += new System.EventHandler(this.PrecioAgregar_TextChanged);
             // 
-            // Cantidad
+            // CantidadCantidad
             // 
-            this.Cantidad.Location = new System.Drawing.Point(93, 217);
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Size = new System.Drawing.Size(57, 20);
-            this.Cantidad.TabIndex = 8;
+            this.CantidadCantidad.Location = new System.Drawing.Point(93, 217);
+            this.CantidadCantidad.Name = "CantidadCantidad";
+            this.CantidadCantidad.Size = new System.Drawing.Size(57, 20);
+            this.CantidadCantidad.TabIndex = 8;
+            this.CantidadCantidad.TextChanged += new System.EventHandler(this.CantidadCantidad_TextChanged);
             // 
             // Guardar
             // 
@@ -118,6 +122,7 @@
             this.Guardar.TabIndex = 9;
             this.Guardar.Text = "Guardar";
             this.Guardar.UseVisualStyleBackColor = true;
+            this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
             // Salir
             // 
@@ -131,7 +136,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(302, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(346, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(315, 274);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -147,27 +152,28 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "ID";
             // 
-            // ID
+            // IDAgregar
             // 
-            this.ID.Location = new System.Drawing.Point(93, 32);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(75, 20);
-            this.ID.TabIndex = 13;
+            this.IDAgregar.Location = new System.Drawing.Point(93, 32);
+            this.IDAgregar.Name = "IDAgregar";
+            this.IDAgregar.Size = new System.Drawing.Size(75, 20);
+            this.IDAgregar.TabIndex = 13;
+            this.IDAgregar.TextChanged += new System.EventHandler(this.IDAgregar_TextChanged);
             // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 413);
-            this.Controls.Add(this.ID);
+            this.Controls.Add(this.IDAgregar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Salir);
             this.Controls.Add(this.Guardar);
-            this.Controls.Add(this.Cantidad);
-            this.Controls.Add(this.Precio);
-            this.Controls.Add(this.Unidad);
-            this.Controls.Add(this.Nombre);
+            this.Controls.Add(this.CantidadCantidad);
+            this.Controls.Add(this.PrecioAgregar);
+            this.Controls.Add(this.UnidadAgregar);
+            this.Controls.Add(this.NombreAgregar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -186,14 +192,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox Nombre;
-        private System.Windows.Forms.TextBox Unidad;
-        private System.Windows.Forms.TextBox Precio;
-        private System.Windows.Forms.TextBox Cantidad;
+        private System.Windows.Forms.TextBox NombreAgregar;
+        private System.Windows.Forms.TextBox UnidadAgregar;
+        private System.Windows.Forms.TextBox PrecioAgregar;
+        private System.Windows.Forms.TextBox CantidadCantidad;
         private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.Button Salir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.TextBox IDAgregar;
     }
 }
