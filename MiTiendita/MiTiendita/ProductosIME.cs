@@ -13,11 +13,14 @@ namespace MiTiendita
         public static int AgregarProductos(Productos pProductos) //Funcion Agregar a Consola
         {
             int retorno = 0;
-
-            MySqlCommand comando = new MySqlCommand(string.Format("Insert into producto (idProducto,nombre,unidades,precio,pieza) values ('{0}','{1}','{2}', '{3}','{4}')",
-            pProductos.idProducto, pProductos.nombre, pProductos.unidanes, pProductos.precio, pProductos.pieza), conexionSQL.obtenerConexion());
-            retorno = comando.ExecuteNonQuery();
-            return retorno;
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("Insert into producto (idProducto,nombre,unidades,precio,pieza) values ('{0}','{1}','{2}', '{3}','{4}')",
+                pProductos.idProducto, pProductos.nombre, pProductos.unidanes, pProductos.precio, pProductos.pieza), conexionSQL.obtenerConexion());
+                retorno = comando.ExecuteNonQuery();
+                return retorno;
+            }
+            catch { return 0; }
         }
         /// <summary>
         //

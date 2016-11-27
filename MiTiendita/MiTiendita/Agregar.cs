@@ -54,13 +54,13 @@ namespace MiTiendita
                 int resultado = ProductosIME.AgregarProductos(pProductos);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Cliente Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Productos registrados con exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Limpiar();
                     //Deshabilitar();
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo guardar el cliente", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("No se pudo guardar el producto, verifique su ID de producto", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
 
