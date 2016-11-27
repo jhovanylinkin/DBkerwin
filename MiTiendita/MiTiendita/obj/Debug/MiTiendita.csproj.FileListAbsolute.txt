@@ -9,3 +9,6 @@ C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTi
 C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Agregar.resources
 C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Principal.resources
 C:\Users\Mauricio Sak\Source\Repos\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Buscar.resources
+C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\bin\Debug\MiTiendita.exe.config
+C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.exe
+C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.pdb
