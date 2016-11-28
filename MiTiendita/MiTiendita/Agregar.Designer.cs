@@ -38,7 +38,6 @@
             this.PrecioAgregar = new System.Windows.Forms.TextBox();
             this.CantidadCantidad = new System.Windows.Forms.TextBox();
             this.Guardar = new System.Windows.Forms.Button();
-            this.Salir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.IDAgregar = new System.Windows.Forms.TextBox();
@@ -116,7 +115,7 @@
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(93, 307);
+            this.Guardar.Location = new System.Drawing.Point(46, 298);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 9;
@@ -124,19 +123,10 @@
             this.Guardar.UseVisualStyleBackColor = true;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
-            // Salir
-            // 
-            this.Salir.Location = new System.Drawing.Point(586, 368);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(75, 23);
-            this.Salir.TabIndex = 10;
-            this.Salir.Text = "Salir";
-            this.Salir.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(346, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(278, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(315, 274);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,11 +154,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 413);
+            this.ClientSize = new System.Drawing.Size(595, 343);
             this.Controls.Add(this.IDAgregar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Salir);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.CantidadCantidad);
             this.Controls.Add(this.PrecioAgregar);
@@ -180,6 +169,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Agregar";
             this.Text = "Agregar";
+            this.Load += new System.EventHandler(this.Agregar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,7 +187,6 @@
         private System.Windows.Forms.TextBox PrecioAgregar;
         private System.Windows.Forms.TextBox CantidadCantidad;
         private System.Windows.Forms.Button Guardar;
-        private System.Windows.Forms.Button Salir;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox IDAgregar;

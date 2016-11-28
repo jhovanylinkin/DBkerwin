@@ -54,7 +54,7 @@ namespace MiTiendita
                 int resultado = ProductosIME.AgregarProductos(pProductos);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Productos registrados con exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Productos registrados con exito :9 ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Limpiar();
                     //Deshabilitar();
                 }
@@ -88,6 +88,11 @@ namespace MiTiendita
         }
 
         private void CantidadCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Agregar_Load(object sender, EventArgs e)
         {
 
         }
