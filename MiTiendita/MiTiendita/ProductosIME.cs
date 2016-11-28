@@ -29,30 +29,30 @@ namespace MiTiendita
         /// <param name="cDescripcion"></param>
         /// <returns></returns>
         /// 
-        /*
-        public static List<Compras> BuscarCompras(int cId, string cDescripcion)//Metodo que busca las Compras realizadas
+        
+        public static List<Productos> BuscarCompras(int pId, string pNombre)//Metodo que busca los productos
         {
-            List<Compras> _listaCompra = new List<Compras>();
+            List<Productos> _listaProductos = new List<Productos>();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idCompras, Descripcion_Compras,Cantidad_Compras,PrecioPruducto_Compras, Total_Compras  where idCompras ='{0}' or Descripcion_Compras='{1}'", cId, cDescripcion), bdComun.ObtenerConexion());
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto, nombre,unidades,precio, pieza  where idProducto ='{0}' or nombre='{1}'", pId, pNombre), conexionSQL.obtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                Compras pCompras = new Compras();
+                Productos pProductos = new Productos();
 
-                pCompras.idCompras = _reader.GetInt32(0);
-                pCompras.Descripcion_Compras = _reader.GetString(1);
-                pCompras.PrecioProducto_Compras = _reader.GetString(2);
-                pCompras.Cantidad_Compras = _reader.GetString(3);
-                pCompras.PrecioProducto_Compras = _reader.GetString(4);
-                pCompras.Total_Compras = _reader.GetString(5);
+                pProductos.idProducto = _reader.GetInt32(0);
+                pProductos.nombre = _reader.GetString(1);
+                pProductos.unidanes = _reader.GetString(2);
+                pProductos.precio = _reader.GetDouble(3);
+                pProductos.pieza = _reader.GetInt32(4);
+               
 
-                _listaCompra.Add(pCompras);
+                _listaProductos.Add(pProductos);
             }
-            return _listaCompra;
+            return _listaProductos;
 
         }
-
+        /*
         /////////////////////////////////////////////////////////////////////////////////////////////////////
         public static Compras ObtenerCompras(int cId)//Metodo ObtenerCompras 
         {
@@ -75,6 +75,7 @@ namespace MiTiendita
             conexion.Close();
             return pCompras;
         }
+        
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public static int ActualizarCompras(Compras pCompras)//Metodo Actualizar

@@ -47,14 +47,14 @@ namespace MiTiendita
                 pProductos.nombre = NombreAgregar.Text.Trim();
                 pProductos.unidanes = UnidadAgregar.Text.Trim();
                 pProductos.precio = integrarPrecio;
-               // pProductos.Fecha_Nacimiento = dateTimePicker1.Value.Year + "/" + dateTimePicker1.Value.Month + "/" + dateTimePicker1.Value.Day;
+               //pProductos.Fecha_Nacimiento = dateTimePicker1.Value.Year + "/" + dateTimePicker1.Value.Month + "/" + dateTimePicker1.Value.Day;
                 pProductos.pieza = integrarPieza;
              
 
                 int resultado = ProductosIME.AgregarProductos(pProductos);
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Productos registrados con exito :9 ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Productos registrados con exito ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Limpiar();
                     //Deshabilitar();
                 }
