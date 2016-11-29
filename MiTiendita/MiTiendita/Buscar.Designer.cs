@@ -33,20 +33,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-            this.Lista = new System.Windows.Forms.ListBox();
-            this.Inicio = new System.Windows.Forms.Button();
-            this.Borrar = new System.Windows.Forms.Button();
-            this.Busca = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ActualizarProducto = new System.Windows.Forms.Button();
-=======
             this.Borrar = new System.Windows.Forms.Button();
             this.Busca = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewBuscarProductos = new System.Windows.Forms.DataGridView();
             this.actualizarBuscar = new System.Windows.Forms.Button();
->>>>>>> dev
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBuscarProductos)).BeginInit();
             this.SuspendLayout();
@@ -85,26 +76,6 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Nombre";
             // 
-<<<<<<< HEAD
-            // Lista
-            // 
-            this.Lista.FormattingEnabled = true;
-            this.Lista.Location = new System.Drawing.Point(69, 168);
-            this.Lista.Name = "Lista";
-            this.Lista.Size = new System.Drawing.Size(575, 147);
-            this.Lista.TabIndex = 18;
-            // 
-            // Inicio
-            // 
-            this.Inicio.Location = new System.Drawing.Point(584, 369);
-            this.Inicio.Name = "Inicio";
-            this.Inicio.Size = new System.Drawing.Size(75, 23);
-            this.Inicio.TabIndex = 19;
-            this.Inicio.Text = "Inicio";
-            this.Inicio.UseVisualStyleBackColor = true;
-            // 
-=======
->>>>>>> dev
             // Borrar
             // 
             this.Borrar.Location = new System.Drawing.Point(413, 345);
@@ -128,29 +99,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(494, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(271, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 136);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
-<<<<<<< HEAD
-            // ActualizarProducto
-            // 
-            this.ActualizarProducto.Location = new System.Drawing.Point(289, 345);
-            this.ActualizarProducto.Name = "ActualizarProducto";
-            this.ActualizarProducto.Size = new System.Drawing.Size(62, 23);
-            this.ActualizarProducto.TabIndex = 23;
-            this.ActualizarProducto.Text = "button1";
-            this.ActualizarProducto.UseVisualStyleBackColor = true;
-=======
             // dataGridViewBuscarProductos
             // 
             this.dataGridViewBuscarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBuscarProductos.Location = new System.Drawing.Point(35, 130);
             this.dataGridViewBuscarProductos.Name = "dataGridViewBuscarProductos";
-            this.dataGridViewBuscarProductos.Size = new System.Drawing.Size(453, 201);
+            this.dataGridViewBuscarProductos.Size = new System.Drawing.Size(550, 201);
             this.dataGridViewBuscarProductos.TabIndex = 23;
             this.dataGridViewBuscarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBuscarProductos_CellContentClick);
             // 
@@ -163,27 +124,17 @@
             this.actualizarBuscar.Text = "Actualizar";
             this.actualizarBuscar.UseVisualStyleBackColor = true;
             this.actualizarBuscar.Click += new System.EventHandler(this.actualizarBuscar_Click);
->>>>>>> dev
             // 
             // Buscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 418);
-<<<<<<< HEAD
-            this.Controls.Add(this.ActualizarProducto);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Busca);
-            this.Controls.Add(this.Borrar);
-            this.Controls.Add(this.Inicio);
-            this.Controls.Add(this.Lista);
-=======
+            this.ClientSize = new System.Drawing.Size(616, 379);
             this.Controls.Add(this.actualizarBuscar);
             this.Controls.Add(this.dataGridViewBuscarProductos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Busca);
             this.Controls.Add(this.Borrar);
->>>>>>> dev
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Nombre);
@@ -203,19 +154,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label label1;
-<<<<<<< HEAD
-        private System.Windows.Forms.ListBox Lista;
-        private System.Windows.Forms.Button Inicio;
-        private System.Windows.Forms.Button Borrar;
-        private System.Windows.Forms.Button Busca;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button ActualizarProducto;
-=======
         private System.Windows.Forms.Button Borrar;
         private System.Windows.Forms.Button Busca;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridViewBuscarProductos;
         private System.Windows.Forms.Button actualizarBuscar;
->>>>>>> dev
     }
 }
