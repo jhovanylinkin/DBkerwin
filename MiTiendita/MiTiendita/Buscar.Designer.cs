@@ -33,12 +33,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Lista = new System.Windows.Forms.ListBox();
-            this.Salir = new System.Windows.Forms.Button();
             this.Borrar = new System.Windows.Forms.Button();
             this.Busca = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewBuscarProductos = new System.Windows.Forms.DataGridView();
+            this.actualizarBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBuscarProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // ID
@@ -47,6 +48,7 @@
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(75, 20);
             this.ID.TabIndex = 17;
+            this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
             // 
             // label5
             // 
@@ -63,6 +65,7 @@
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(144, 20);
             this.Nombre.TabIndex = 15;
+            this.Nombre.TextChanged += new System.EventHandler(this.Nombre_TextChanged);
             // 
             // label1
             // 
@@ -73,61 +76,65 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Nombre";
             // 
-            // Lista
-            // 
-            this.Lista.FormattingEnabled = true;
-            this.Lista.Location = new System.Drawing.Point(69, 168);
-            this.Lista.Name = "Lista";
-            this.Lista.Size = new System.Drawing.Size(575, 147);
-            this.Lista.TabIndex = 18;
-            // 
-            // Salir
-            // 
-            this.Salir.Location = new System.Drawing.Point(584, 369);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(75, 23);
-            this.Salir.TabIndex = 19;
-            this.Salir.Text = "Salir";
-            this.Salir.UseVisualStyleBackColor = true;
-            // 
             // Borrar
             // 
-            this.Borrar.Location = new System.Drawing.Point(191, 345);
+            this.Borrar.Location = new System.Drawing.Point(413, 345);
             this.Borrar.Name = "Borrar";
             this.Borrar.Size = new System.Drawing.Size(75, 23);
             this.Borrar.TabIndex = 20;
             this.Borrar.Text = "Borrar";
             this.Borrar.UseVisualStyleBackColor = true;
+            this.Borrar.Click += new System.EventHandler(this.Borrar_Click);
             // 
             // Busca
             // 
-            this.Busca.Location = new System.Drawing.Point(80, 345);
+            this.Busca.Location = new System.Drawing.Point(251, 345);
             this.Busca.Name = "Busca";
             this.Busca.Size = new System.Drawing.Size(75, 23);
             this.Busca.TabIndex = 21;
             this.Busca.Text = "Buscar";
             this.Busca.UseVisualStyleBackColor = true;
+            this.Busca.Click += new System.EventHandler(this.Busca_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(432, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(494, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 136);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // dataGridViewBuscarProductos
+            // 
+            this.dataGridViewBuscarProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBuscarProductos.Location = new System.Drawing.Point(35, 130);
+            this.dataGridViewBuscarProductos.Name = "dataGridViewBuscarProductos";
+            this.dataGridViewBuscarProductos.Size = new System.Drawing.Size(453, 201);
+            this.dataGridViewBuscarProductos.TabIndex = 23;
+            this.dataGridViewBuscarProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBuscarProductos_CellContentClick);
+            // 
+            // actualizarBuscar
+            // 
+            this.actualizarBuscar.Location = new System.Drawing.Point(332, 345);
+            this.actualizarBuscar.Name = "actualizarBuscar";
+            this.actualizarBuscar.Size = new System.Drawing.Size(75, 23);
+            this.actualizarBuscar.TabIndex = 24;
+            this.actualizarBuscar.Text = "Actualizar";
+            this.actualizarBuscar.UseVisualStyleBackColor = true;
+            this.actualizarBuscar.Click += new System.EventHandler(this.actualizarBuscar_Click);
+            // 
             // Buscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 418);
+            this.Controls.Add(this.actualizarBuscar);
+            this.Controls.Add(this.dataGridViewBuscarProductos);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Busca);
             this.Controls.Add(this.Borrar);
-            this.Controls.Add(this.Salir);
-            this.Controls.Add(this.Lista);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Nombre);
@@ -135,6 +142,7 @@
             this.Name = "Buscar";
             this.Text = "Buscar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBuscarProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,11 +154,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox Lista;
-        private System.Windows.Forms.Button Salir;
         private System.Windows.Forms.Button Borrar;
         private System.Windows.Forms.Button Busca;
         private System.Windows.Forms.PictureBox pictureBox1;
-
+        private System.Windows.Forms.DataGridView dataGridViewBuscarProductos;
+        private System.Windows.Forms.Button actualizarBuscar;
     }
 }
