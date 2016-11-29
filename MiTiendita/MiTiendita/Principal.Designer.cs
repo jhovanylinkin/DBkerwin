@@ -114,7 +114,7 @@
             this.Proveedor.Name = "Proveedor";
             this.Proveedor.Size = new System.Drawing.Size(79, 35);
             this.Proveedor.TabIndex = 8;
-            this.Proveedor.Text = "Proveedor";
+            this.Proveedor.Text = "Proveedores";
             this.Proveedor.UseVisualStyleBackColor = true;
             // 
             // Principal

@@ -41,6 +41,7 @@
             this.DireccionProveedor = new System.Windows.Forms.TextBox();
             this.TelefonoProveedor = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ActualizarProveedor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // 
             this.BorrarProveedor.Location = new System.Drawing.Point(228, 329);
             this.BorrarProveedor.Name = "BorrarProveedor";
-            this.BorrarProveedor.Size = new System.Drawing.Size(67, 23);
+            this.BorrarProveedor.Size = new System.Drawing.Size(77, 23);
             this.BorrarProveedor.TabIndex = 2;
             this.BorrarProveedor.Text = "Borrar";
             this.BorrarProveedor.UseVisualStyleBackColor = true;
@@ -152,11 +153,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(618, 239);
             this.dataGridView1.TabIndex = 12;
             // 
+            // ActualizarProveedor
+            // 
+            this.ActualizarProveedor.Location = new System.Drawing.Point(326, 329);
+            this.ActualizarProveedor.Name = "ActualizarProveedor";
+            this.ActualizarProveedor.Size = new System.Drawing.Size(75, 23);
+            this.ActualizarProveedor.TabIndex = 13;
+            this.ActualizarProveedor.Text = "Actualizar";
+            this.ActualizarProveedor.UseVisualStyleBackColor = true;
+            // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 364);
+            this.Controls.Add(this.ActualizarProveedor);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.TelefonoProveedor);
             this.Controls.Add(this.DireccionProveedor);
@@ -193,5 +204,6 @@
         private System.Windows.Forms.TextBox DireccionProveedor;
         private System.Windows.Forms.TextBox TelefonoProveedor;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button ActualizarProveedor;
     }
 }

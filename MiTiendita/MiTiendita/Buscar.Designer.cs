@@ -34,10 +34,11 @@
             this.Nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Lista = new System.Windows.Forms.ListBox();
-            this.Salir = new System.Windows.Forms.Button();
+            this.Inicio = new System.Windows.Forms.Button();
             this.Borrar = new System.Windows.Forms.Button();
             this.Busca = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ActualizarProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,14 +82,14 @@
             this.Lista.Size = new System.Drawing.Size(575, 147);
             this.Lista.TabIndex = 18;
             // 
-            // Salir
+            // Inicio
             // 
-            this.Salir.Location = new System.Drawing.Point(584, 369);
-            this.Salir.Name = "Salir";
-            this.Salir.Size = new System.Drawing.Size(75, 23);
-            this.Salir.TabIndex = 19;
-            this.Salir.Text = "Salir";
-            this.Salir.UseVisualStyleBackColor = true;
+            this.Inicio.Location = new System.Drawing.Point(584, 369);
+            this.Inicio.Name = "Inicio";
+            this.Inicio.Size = new System.Drawing.Size(75, 23);
+            this.Inicio.TabIndex = 19;
+            this.Inicio.Text = "Inicio";
+            this.Inicio.UseVisualStyleBackColor = true;
             // 
             // Borrar
             // 
@@ -118,15 +119,25 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // ActualizarProducto
+            // 
+            this.ActualizarProducto.Location = new System.Drawing.Point(289, 345);
+            this.ActualizarProducto.Name = "ActualizarProducto";
+            this.ActualizarProducto.Size = new System.Drawing.Size(62, 23);
+            this.ActualizarProducto.TabIndex = 23;
+            this.ActualizarProducto.Text = "button1";
+            this.ActualizarProducto.UseVisualStyleBackColor = true;
+            // 
             // Buscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 418);
+            this.Controls.Add(this.ActualizarProducto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Busca);
             this.Controls.Add(this.Borrar);
-            this.Controls.Add(this.Salir);
+            this.Controls.Add(this.Inicio);
             this.Controls.Add(this.Lista);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.label5);
@@ -147,10 +158,10 @@
         private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox Lista;
-        private System.Windows.Forms.Button Salir;
+        private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.Button Borrar;
         private System.Windows.Forms.Button Busca;
         private System.Windows.Forms.PictureBox pictureBox1;
-
+        private System.Windows.Forms.Button ActualizarProducto;
     }
 }

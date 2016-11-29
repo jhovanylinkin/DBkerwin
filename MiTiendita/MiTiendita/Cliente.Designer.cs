@@ -39,12 +39,13 @@
             this.DireccionCliente = new System.Windows.Forms.TextBox();
             this.Inicio = new System.Windows.Forms.Button();
             this.ListaCliente = new System.Windows.Forms.DataGridView();
+            this.ActualizarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListaCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // AgregarCliente
             // 
-            this.AgregarCliente.Location = new System.Drawing.Point(86, 263);
+            this.AgregarCliente.Location = new System.Drawing.Point(24, 160);
             this.AgregarCliente.Name = "AgregarCliente";
             this.AgregarCliente.Size = new System.Drawing.Size(75, 23);
             this.AgregarCliente.TabIndex = 0;
@@ -53,7 +54,7 @@
             // 
             // BuscarCliente
             // 
-            this.BuscarCliente.Location = new System.Drawing.Point(190, 263);
+            this.BuscarCliente.Location = new System.Drawing.Point(24, 202);
             this.BuscarCliente.Name = "BuscarCliente";
             this.BuscarCliente.Size = new System.Drawing.Size(75, 23);
             this.BuscarCliente.TabIndex = 1;
@@ -62,7 +63,7 @@
             // 
             // BorrarCliente
             // 
-            this.BorrarCliente.Location = new System.Drawing.Point(304, 263);
+            this.BorrarCliente.Location = new System.Drawing.Point(24, 240);
             this.BorrarCliente.Name = "BorrarCliente";
             this.BorrarCliente.Size = new System.Drawing.Size(75, 23);
             this.BorrarCliente.TabIndex = 2;
@@ -72,7 +73,7 @@
             // NombreLb
             // 
             this.NombreLb.AutoSize = true;
-            this.NombreLb.Location = new System.Drawing.Point(36, 52);
+            this.NombreLb.Location = new System.Drawing.Point(36, 9);
             this.NombreLb.Name = "NombreLb";
             this.NombreLb.Size = new System.Drawing.Size(44, 13);
             this.NombreLb.TabIndex = 3;
@@ -81,7 +82,7 @@
             // TelefonoLb
             // 
             this.TelefonoLb.AutoSize = true;
-            this.TelefonoLb.Location = new System.Drawing.Point(36, 106);
+            this.TelefonoLb.Location = new System.Drawing.Point(36, 73);
             this.TelefonoLb.Name = "TelefonoLb";
             this.TelefonoLb.Size = new System.Drawing.Size(49, 13);
             this.TelefonoLb.TabIndex = 4;
@@ -90,7 +91,7 @@
             // DireccionLb
             // 
             this.DireccionLb.AutoSize = true;
-            this.DireccionLb.Location = new System.Drawing.Point(36, 162);
+            this.DireccionLb.Location = new System.Drawing.Point(36, 39);
             this.DireccionLb.Name = "DireccionLb";
             this.DireccionLb.Size = new System.Drawing.Size(52, 13);
             this.DireccionLb.TabIndex = 5;
@@ -98,28 +99,28 @@
             // 
             // NombreCliente
             // 
-            this.NombreCliente.Location = new System.Drawing.Point(94, 49);
+            this.NombreCliente.Location = new System.Drawing.Point(94, 6);
             this.NombreCliente.Name = "NombreCliente";
-            this.NombreCliente.Size = new System.Drawing.Size(100, 20);
+            this.NombreCliente.Size = new System.Drawing.Size(412, 20);
             this.NombreCliente.TabIndex = 6;
             // 
             // TelefonoCliente
             // 
-            this.TelefonoCliente.Location = new System.Drawing.Point(94, 99);
+            this.TelefonoCliente.Location = new System.Drawing.Point(94, 36);
             this.TelefonoCliente.Name = "TelefonoCliente";
-            this.TelefonoCliente.Size = new System.Drawing.Size(100, 20);
+            this.TelefonoCliente.Size = new System.Drawing.Size(412, 20);
             this.TelefonoCliente.TabIndex = 7;
             // 
             // DireccionCliente
             // 
-            this.DireccionCliente.Location = new System.Drawing.Point(94, 155);
+            this.DireccionCliente.Location = new System.Drawing.Point(94, 70);
             this.DireccionCliente.Name = "DireccionCliente";
             this.DireccionCliente.Size = new System.Drawing.Size(100, 20);
             this.DireccionCliente.TabIndex = 8;
             // 
             // Inicio
             // 
-            this.Inicio.Location = new System.Drawing.Point(526, 300);
+            this.Inicio.Location = new System.Drawing.Point(119, 300);
             this.Inicio.Name = "Inicio";
             this.Inicio.Size = new System.Drawing.Size(75, 23);
             this.Inicio.TabIndex = 9;
@@ -129,16 +130,26 @@
             // ListaCliente
             // 
             this.ListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaCliente.Location = new System.Drawing.Point(263, 12);
+            this.ListaCliente.Location = new System.Drawing.Point(200, 103);
             this.ListaCliente.Name = "ListaCliente";
-            this.ListaCliente.Size = new System.Drawing.Size(356, 245);
+            this.ListaCliente.Size = new System.Drawing.Size(410, 220);
             this.ListaCliente.TabIndex = 10;
+            // 
+            // ActualizarCliente
+            // 
+            this.ActualizarCliente.Location = new System.Drawing.Point(24, 281);
+            this.ActualizarCliente.Name = "ActualizarCliente";
+            this.ActualizarCliente.Size = new System.Drawing.Size(75, 23);
+            this.ActualizarCliente.TabIndex = 11;
+            this.ActualizarCliente.Text = "Actualizar";
+            this.ActualizarCliente.UseVisualStyleBackColor = true;
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 335);
+            this.Controls.Add(this.ActualizarCliente);
             this.Controls.Add(this.ListaCliente);
             this.Controls.Add(this.Inicio);
             this.Controls.Add(this.DireccionCliente);
@@ -171,5 +182,6 @@
         private System.Windows.Forms.TextBox DireccionCliente;
         private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.DataGridView ListaCliente;
+        private System.Windows.Forms.Button ActualizarCliente;
     }
 }

@@ -43,6 +43,7 @@
             this.Precio = new System.Windows.Forms.Label();
             this.PrecioCompra = new System.Windows.Forms.TextBox();
             this.ListaCompra = new System.Windows.Forms.DataGridView();
+            this.ActualizarCompra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListaCompra)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,11 +171,22 @@
             this.ListaCompra.Size = new System.Drawing.Size(586, 229);
             this.ListaCompra.TabIndex = 14;
             // 
+            // ActualizarCompra
+            // 
+            this.ActualizarCompra.Location = new System.Drawing.Point(258, 334);
+            this.ActualizarCompra.Name = "ActualizarCompra";
+            this.ActualizarCompra.Size = new System.Drawing.Size(75, 23);
+            this.ActualizarCompra.TabIndex = 15;
+            this.ActualizarCompra.Text = "Actualizar";
+            this.ActualizarCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ActualizarCompra.UseVisualStyleBackColor = true;
+            // 
             // Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 377);
+            this.Controls.Add(this.ActualizarCompra);
             this.Controls.Add(this.ListaCompra);
             this.Controls.Add(this.PrecioCompra);
             this.Controls.Add(this.Precio);
@@ -215,5 +227,6 @@
         private System.Windows.Forms.Label Precio;
         private System.Windows.Forms.TextBox PrecioCompra;
         private System.Windows.Forms.DataGridView ListaCompra;
+        private System.Windows.Forms.Button ActualizarCompra;
     }
 }
