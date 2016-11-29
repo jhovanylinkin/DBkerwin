@@ -72,7 +72,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(552, 309);
+            this.button1.Location = new System.Drawing.Point(552, 298);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 35);
             this.button1.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             // Desconectar
             // 
-            this.Desconectar.Location = new System.Drawing.Point(552, 350);
+            this.Desconectar.Location = new System.Drawing.Point(552, 339);
             this.Desconectar.Name = "Desconectar";
             this.Desconectar.Size = new System.Drawing.Size(91, 35);
             this.Desconectar.TabIndex = 5;
