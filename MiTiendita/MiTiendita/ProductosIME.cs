@@ -30,11 +30,11 @@ namespace MiTiendita
         /// <returns></returns>
         /// 
         
-        public static List<Productos> BuscarCompras(int pId, string pNombre)//Metodo que busca los productos
+        public static List<Productos> BuscarProductos(int pId, string pNombre)//Metodo que busca los productos
         {
-            List<Productos> _listaProductos = new List<Productos>();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto, nombre,unidades,precio, pieza  where idProducto ='{0}' or nombre='{1}'", pId, pNombre), conexionSQL.obtenerConexion());
+            List<Productos> _listaProductos = new List<Productos>();
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto,nombre,unidades,precio, pieza FROM producto where idProducto='{0}' or nombre='{1}'", pId, pNombre), conexionSQL.obtenerConexion());
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -52,38 +52,37 @@ namespace MiTiendita
             return _listaProductos;
 
         }
-        /*
+        
         /////////////////////////////////////////////////////////////////////////////////////////////////////
-        public static Compras ObtenerCompras(int cId)//Metodo ObtenerCompras 
+        public static Productos ObtenerProductos(int pId)//Metodo ObtenerProductos
         {
-            Compras pCompras = new Compras();
-            MySqlConnection conexion = bdComun.ObtenerConexion();
+            Productos pProductos = new Productos();
+            MySqlConnection conexion = conexionSQL.obtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idCompras, Descripcion_Compras, Provedor_Compras,Cantidad_Compras,PrecioPruducto_Compras, Total_Compras  FROM Compras where idCompras={0}", cId), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto, nombre, unidades,precio,pieza FROM producto where idProducto={0}", pId),conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
-                pCompras.idCompras = _reader.GetInt32(0);
-                pCompras.Descripcion_Compras = _reader.GetString(1);
-                pCompras.PrecioProducto_Compras = _reader.GetString(2);
-                pCompras.Cantidad_Compras = _reader.GetString(3);
-                pCompras.PrecioProducto_Compras = _reader.GetString(4);
-                pCompras.Total_Compras = _reader.GetString(5);
-
+                pProductos.idProducto = _reader.GetInt32(0);
+                pProductos.nombre= _reader.GetString(1);
+                pProductos.unidanes = _reader.GetString(2);
+                pProductos.precio = _reader.GetDouble(3);
+                pProductos.pieza = _reader.GetInt32(4);
+             
             }
 
             conexion.Close();
-            return pCompras;
+            return pProductos;
         }
         
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public static int ActualizarCompras(Compras pCompras)//Metodo Actualizar
+        public static int ActualizarProducto(Productos pProductos)//Metodo Actualizar
         {
             int retorno = 0;
-            MySqlConnection conexion = bdComun.ObtenerConexion();
+            MySqlConnection conexion = conexionSQL.obtenerConexion();
 
-            MySqlCommand comando = new MySqlCommand(string.Format("Update Compras set Descripcion_Compras='{0}', Provedor_Compras='{1}', Cantidad_Compras='{2}', PrecioProducto_Compras='{3}', Total_Compras='{4}' where idCompras='{5}', ", pCompras.Descripcion_Compras, pCompras.PrecioProducto_Compras, pCompras.PrecioProducto_Compras, pCompras.Cantidad_Compras, pCompras.Total_Compras, pCompras.idCompras), conexion);
+           MySqlCommand comando = new MySqlCommand(string.Format("Update producto set nombre='{0}', unidades='{1}', precio='{2}', pieza='{3}' where idProducto='{4}'", pProductos.nombre, pProductos.unidanes, pProductos.precio, pProductos.pieza, pProductos.idProducto), conexion);
 
             retorno = comando.ExecuteNonQuery();
             conexion.Close();
@@ -92,21 +91,21 @@ namespace MiTiendita
 
 
         }
-
+        
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public static int EliminarCompras(int cId)//Metodo Eliminar en Compras
+        public static int EliminarProductos(int pId)//Metodo Eliminar en Compras
         {
             int retorno = 0;
-            MySqlConnection conexion = bdComun.ObtenerConexion();
-            MySqlCommand comando = new MySqlCommand(string.Format("Delete From Compras where idCompras={0}", cId), conexion);
+            MySqlConnection conexion = conexionSQL.obtenerConexion();
+            MySqlCommand comando = new MySqlCommand(string.Format("Delete From producto where idProducto={0}", pId), conexion);
             retorno = comando.ExecuteNonQuery();
             conexion.Close();
             return retorno;
 
 
         }
-        */
+        
 
     }
 }
