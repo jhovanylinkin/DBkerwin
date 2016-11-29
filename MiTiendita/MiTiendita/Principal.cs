@@ -28,8 +28,7 @@ namespace MiTiendita
 
         private void Buscar_Click(object sender, EventArgs e)
         {
-            Buscar i = new Buscar();
-            i.Show();
+            
         }
         public void abrircconeccion()
         {
@@ -68,6 +67,17 @@ namespace MiTiendita
         private void Desconectar_Click(object sender, EventArgs e)
         {
             cerrarconeccion();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clientes_Click(object sender, EventArgs e)
+        {
+            Cliente i = new Cliente();
+            i.Show();
         }
     }
 }

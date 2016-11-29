@@ -96,5 +96,11 @@ namespace MiTiendita
         {
 
         }
+
+        private void ActualizartoProductos_Click(object sender, EventArgs e)
+        {
+            Buscar i = new Buscar();
+            i.Show();
+        }
     }
 }

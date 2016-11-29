@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.Agregar = new System.Windows.Forms.Button();
-            this.Clietes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Desconectar = new System.Windows.Forms.Button();
             this.Ventas = new System.Windows.Forms.Button();
             this.Compras = new System.Windows.Forms.Button();
             this.Proveedor = new System.Windows.Forms.Button();
+            this.clientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,16 +49,6 @@
             this.Agregar.Text = "Productos";
             this.Agregar.UseVisualStyleBackColor = true;
             this.Agregar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Clietes
-            // 
-            this.Clietes.Location = new System.Drawing.Point(125, 325);
-            this.Clietes.Name = "Clietes";
-            this.Clietes.Size = new System.Drawing.Size(91, 35);
-            this.Clietes.TabIndex = 2;
-            this.Clietes.Text = "Clientes";
-            this.Clietes.UseVisualStyleBackColor = true;
-            this.Clietes.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // pictureBox1
             // 
@@ -117,21 +107,32 @@
             this.Proveedor.Text = "Proveedores";
             this.Proveedor.UseVisualStyleBackColor = true;
             // 
+            // clientes
+            // 
+            this.clientes.Location = new System.Drawing.Point(123, 325);
+            this.clientes.Name = "clientes";
+            this.clientes.Size = new System.Drawing.Size(94, 35);
+            this.clientes.TabIndex = 9;
+            this.clientes.Text = "Clientes";
+            this.clientes.UseVisualStyleBackColor = true;
+            this.clientes.Click += new System.EventHandler(this.clientes_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 401);
+            this.Controls.Add(this.clientes);
             this.Controls.Add(this.Proveedor);
             this.Controls.Add(this.Compras);
             this.Controls.Add(this.Ventas);
             this.Controls.Add(this.Desconectar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Clietes);
             this.Controls.Add(this.Agregar);
             this.Name = "Principal";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.Principal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -140,13 +141,13 @@
         #endregion
 
         private System.Windows.Forms.Button Agregar;
-        private System.Windows.Forms.Button Clietes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Desconectar;
         private System.Windows.Forms.Button Ventas;
         private System.Windows.Forms.Button Compras;
         private System.Windows.Forms.Button Proveedor;
+        private System.Windows.Forms.Button clientes;
     }
 }
 
