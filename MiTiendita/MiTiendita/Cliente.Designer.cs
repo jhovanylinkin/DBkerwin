@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.AgregarCliente = new System.Windows.Forms.Button();
             this.BuscarCliente = new System.Windows.Forms.Button();
             this.BorrarCliente = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.NombreCliente = new System.Windows.Forms.TextBox();
             this.TelefonoCliente = new System.Windows.Forms.TextBox();
             this.DireccionCliente = new System.Windows.Forms.TextBox();
-            this.Inicio = new System.Windows.Forms.Button();
             this.ListaCliente = new System.Windows.Forms.DataGridView();
             this.ActualizarCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListaCliente)).BeginInit();
@@ -45,30 +45,33 @@
             // 
             // AgregarCliente
             // 
+            this.AgregarCliente.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.AgregarCliente.Location = new System.Drawing.Point(24, 160);
             this.AgregarCliente.Name = "AgregarCliente";
             this.AgregarCliente.Size = new System.Drawing.Size(75, 23);
             this.AgregarCliente.TabIndex = 0;
             this.AgregarCliente.Text = "Agregar";
-            this.AgregarCliente.UseVisualStyleBackColor = true;
+            this.AgregarCliente.UseVisualStyleBackColor = false;
             // 
             // BuscarCliente
             // 
+            this.BuscarCliente.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BuscarCliente.Location = new System.Drawing.Point(24, 202);
             this.BuscarCliente.Name = "BuscarCliente";
             this.BuscarCliente.Size = new System.Drawing.Size(75, 23);
             this.BuscarCliente.TabIndex = 1;
             this.BuscarCliente.Text = "Buscar";
-            this.BuscarCliente.UseVisualStyleBackColor = true;
+            this.BuscarCliente.UseVisualStyleBackColor = false;
             // 
             // BorrarCliente
             // 
+            this.BorrarCliente.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BorrarCliente.Location = new System.Drawing.Point(24, 240);
             this.BorrarCliente.Name = "BorrarCliente";
             this.BorrarCliente.Size = new System.Drawing.Size(75, 23);
             this.BorrarCliente.TabIndex = 2;
             this.BorrarCliente.Text = "Borrar";
-            this.BorrarCliente.UseVisualStyleBackColor = true;
+            this.BorrarCliente.UseVisualStyleBackColor = false;
             // 
             // NombreLb
             // 
@@ -118,40 +121,32 @@
             this.DireccionCliente.Size = new System.Drawing.Size(100, 20);
             this.DireccionCliente.TabIndex = 8;
             // 
-            // Inicio
-            // 
-            this.Inicio.Location = new System.Drawing.Point(119, 300);
-            this.Inicio.Name = "Inicio";
-            this.Inicio.Size = new System.Drawing.Size(75, 23);
-            this.Inicio.TabIndex = 9;
-            this.Inicio.Text = "Inicio";
-            this.Inicio.UseVisualStyleBackColor = true;
-            // 
             // ListaCliente
             // 
             this.ListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaCliente.Location = new System.Drawing.Point(200, 103);
+            this.ListaCliente.Location = new System.Drawing.Point(200, 73);
             this.ListaCliente.Name = "ListaCliente";
-            this.ListaCliente.Size = new System.Drawing.Size(410, 220);
+            this.ListaCliente.Size = new System.Drawing.Size(481, 220);
             this.ListaCliente.TabIndex = 10;
             // 
             // ActualizarCliente
             // 
+            this.ActualizarCliente.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ActualizarCliente.Location = new System.Drawing.Point(24, 281);
             this.ActualizarCliente.Name = "ActualizarCliente";
             this.ActualizarCliente.Size = new System.Drawing.Size(75, 23);
             this.ActualizarCliente.TabIndex = 11;
             this.ActualizarCliente.Text = "Actualizar";
-            this.ActualizarCliente.UseVisualStyleBackColor = true;
+            this.ActualizarCliente.UseVisualStyleBackColor = false;
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 335);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(693, 359);
             this.Controls.Add(this.ActualizarCliente);
             this.Controls.Add(this.ListaCliente);
-            this.Controls.Add(this.Inicio);
             this.Controls.Add(this.DireccionCliente);
             this.Controls.Add(this.TelefonoCliente);
             this.Controls.Add(this.NombreCliente);
@@ -180,7 +175,6 @@
         private System.Windows.Forms.TextBox NombreCliente;
         private System.Windows.Forms.TextBox TelefonoCliente;
         private System.Windows.Forms.TextBox DireccionCliente;
-        private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.DataGridView ListaCliente;
         private System.Windows.Forms.Button ActualizarCliente;
     }

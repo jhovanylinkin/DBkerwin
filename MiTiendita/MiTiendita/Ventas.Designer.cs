@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
             this.AgregarVenta = new System.Windows.Forms.Button();
             this.BuscarVenta = new System.Windows.Forms.Button();
             this.BorrarVenta = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.NombreVenta = new System.Windows.Forms.TextBox();
             this.ListaVenta = new System.Windows.Forms.DataGridView();
-            this.Inicio = new System.Windows.Forms.Button();
             this.TotalVenta = new System.Windows.Forms.TextBox();
             this.FechaVenta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ListaVenta)).BeginInit();
@@ -44,31 +44,34 @@
             // 
             // AgregarVenta
             // 
+            this.AgregarVenta.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.AgregarVenta.Location = new System.Drawing.Point(61, 341);
             this.AgregarVenta.Name = "AgregarVenta";
             this.AgregarVenta.Size = new System.Drawing.Size(75, 23);
             this.AgregarVenta.TabIndex = 0;
             this.AgregarVenta.Text = "Agregar";
-            this.AgregarVenta.UseVisualStyleBackColor = true;
+            this.AgregarVenta.UseVisualStyleBackColor = false;
             this.AgregarVenta.Click += new System.EventHandler(this.button1_Click);
             // 
             // BuscarVenta
             // 
+            this.BuscarVenta.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BuscarVenta.Location = new System.Drawing.Point(154, 341);
             this.BuscarVenta.Name = "BuscarVenta";
             this.BuscarVenta.Size = new System.Drawing.Size(75, 23);
             this.BuscarVenta.TabIndex = 1;
             this.BuscarVenta.Text = "Buscar";
-            this.BuscarVenta.UseVisualStyleBackColor = true;
+            this.BuscarVenta.UseVisualStyleBackColor = false;
             // 
             // BorrarVenta
             // 
+            this.BorrarVenta.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BorrarVenta.Location = new System.Drawing.Point(251, 341);
             this.BorrarVenta.Name = "BorrarVenta";
             this.BorrarVenta.Size = new System.Drawing.Size(75, 23);
             this.BorrarVenta.TabIndex = 2;
             this.BorrarVenta.Text = "Borrar";
-            this.BorrarVenta.UseVisualStyleBackColor = true;
+            this.BorrarVenta.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -107,19 +110,10 @@
             // ListaVenta
             // 
             this.ListaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaVenta.Location = new System.Drawing.Point(47, 102);
+            this.ListaVenta.Location = new System.Drawing.Point(34, 87);
             this.ListaVenta.Name = "ListaVenta";
-            this.ListaVenta.Size = new System.Drawing.Size(533, 214);
+            this.ListaVenta.Size = new System.Drawing.Size(691, 214);
             this.ListaVenta.TabIndex = 7;
-            // 
-            // Inicio
-            // 
-            this.Inicio.Location = new System.Drawing.Point(575, 341);
-            this.Inicio.Name = "Inicio";
-            this.Inicio.Size = new System.Drawing.Size(75, 23);
-            this.Inicio.TabIndex = 8;
-            this.Inicio.Text = "Inicio";
-            this.Inicio.UseVisualStyleBackColor = true;
             // 
             // TotalVenta
             // 
@@ -139,10 +133,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 395);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(758, 375);
             this.Controls.Add(this.FechaVenta);
             this.Controls.Add(this.TotalVenta);
-            this.Controls.Add(this.Inicio);
             this.Controls.Add(this.ListaVenta);
             this.Controls.Add(this.NombreVenta);
             this.Controls.Add(this.label3);
@@ -170,7 +164,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox NombreVenta;
         private System.Windows.Forms.DataGridView ListaVenta;
-        private System.Windows.Forms.Button Inicio;
         private System.Windows.Forms.TextBox TotalVenta;
         private System.Windows.Forms.TextBox FechaVenta;
     }

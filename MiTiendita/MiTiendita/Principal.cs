@@ -24,6 +24,7 @@ namespace MiTiendita
         {
             Agregar i = new Agregar();
             i.Show();
+            
         }
 
         private void Buscar_Click(object sender, EventArgs e)
@@ -77,6 +78,24 @@ namespace MiTiendita
         private void clientes_Click(object sender, EventArgs e)
         {
             Cliente i = new Cliente();
+            i.Show();
+        }
+
+        private void Ventas_Click(object sender, EventArgs e)
+        {
+            Ventas i = new Ventas();
+            i.Show();
+        }
+
+        private void Compras_Click(object sender, EventArgs e)
+        {
+            Compras i = new Compras();
+            i.Show();
+        }
+
+        private void Proveedor_Click(object sender, EventArgs e)
+        {
+            Proveedores i = new Proveedores();
             i.Show();
         }
     }

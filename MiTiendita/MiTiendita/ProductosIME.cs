@@ -22,14 +22,8 @@ namespace MiTiendita
             }
             catch { return 0; }
         }
-        /// <summary>
-        //
-        /// </summary>
-        /// <param name="cId"></param>
-        /// <param name="cDescripcion"></param>
-        /// <returns></returns>
-        /// 
-        
+       
+ 
         public static List<Productos> BuscarProductos(int pId, string pNombre)//Metodo que busca los productos
         {
 

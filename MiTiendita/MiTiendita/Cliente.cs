@@ -16,5 +16,12 @@ namespace MiTiendita
         {
             InitializeComponent();
         }
+
+        private void Inicio_Click(object sender, EventArgs e)
+        {
+            Principal i = new Principal();
+            i.Show();
+            this.Close();
+        }
     }
 }

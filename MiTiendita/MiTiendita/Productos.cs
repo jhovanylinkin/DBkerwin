@@ -15,13 +15,12 @@ namespace MiTiendita
         public int pieza { get; set; }
 
 
-        public Productos() { }
+        public Productos(){ }
 
         public Productos(int pId, string pNombre, string pUnidades, double pPrecio, int pPieza)
 
         {
             
-
             this.idProducto = pId;
             this.nombre = pNombre;
             this.unidanes = pUnidades;

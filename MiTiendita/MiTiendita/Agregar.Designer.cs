@@ -116,18 +116,20 @@
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(46, 298);
+            this.Guardar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Guardar.Location = new System.Drawing.Point(46, 323);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 9;
             this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = true;
+            this.Guardar.UseVisualStyleBackColor = false;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(278, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(400, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(315, 274);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,19 +155,21 @@
             // 
             // ActualizartoProductos
             // 
-            this.ActualizartoProductos.Location = new System.Drawing.Point(144, 298);
+            this.ActualizartoProductos.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ActualizartoProductos.Location = new System.Drawing.Point(148, 323);
             this.ActualizartoProductos.Name = "ActualizartoProductos";
             this.ActualizartoProductos.Size = new System.Drawing.Size(115, 23);
             this.ActualizartoProductos.TabIndex = 15;
             this.ActualizartoProductos.Text = "Actualizar";
-            this.ActualizartoProductos.UseVisualStyleBackColor = true;
+            this.ActualizartoProductos.UseVisualStyleBackColor = false;
             this.ActualizartoProductos.Click += new System.EventHandler(this.ActualizartoProductos_Click);
             // 
             // Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 343);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(750, 375);
             this.Controls.Add(this.ActualizartoProductos);
             this.Controls.Add(this.IDAgregar);
             this.Controls.Add(this.label5);
