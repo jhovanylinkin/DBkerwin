@@ -52,16 +52,18 @@
             this.AgregarCliente.TabIndex = 0;
             this.AgregarCliente.Text = "Agregar";
             this.AgregarCliente.UseVisualStyleBackColor = false;
+            this.AgregarCliente.Click += new System.EventHandler(this.AgregarCliente_Click);
             // 
             // BuscarCliente
             // 
             this.BuscarCliente.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BuscarCliente.Location = new System.Drawing.Point(24, 202);
+            this.BuscarCliente.Location = new System.Drawing.Point(24, 199);
             this.BuscarCliente.Name = "BuscarCliente";
             this.BuscarCliente.Size = new System.Drawing.Size(75, 23);
             this.BuscarCliente.TabIndex = 1;
             this.BuscarCliente.Text = "Buscar";
             this.BuscarCliente.UseVisualStyleBackColor = false;
+            this.BuscarCliente.Click += new System.EventHandler(this.BuscarCliente_Click);
             // 
             // BorrarCliente
             // 
@@ -72,6 +74,7 @@
             this.BorrarCliente.TabIndex = 2;
             this.BorrarCliente.Text = "Borrar";
             this.BorrarCliente.UseVisualStyleBackColor = false;
+            this.BorrarCliente.Click += new System.EventHandler(this.BorrarCliente_Click);
             // 
             // NombreLb
             // 
@@ -109,24 +112,24 @@
             // 
             // TelefonoCliente
             // 
-            this.TelefonoCliente.Location = new System.Drawing.Point(94, 36);
+            this.TelefonoCliente.Location = new System.Drawing.Point(94, 66);
             this.TelefonoCliente.Name = "TelefonoCliente";
-            this.TelefonoCliente.Size = new System.Drawing.Size(412, 20);
+            this.TelefonoCliente.Size = new System.Drawing.Size(109, 20);
             this.TelefonoCliente.TabIndex = 7;
             // 
             // DireccionCliente
             // 
-            this.DireccionCliente.Location = new System.Drawing.Point(94, 70);
+            this.DireccionCliente.Location = new System.Drawing.Point(94, 36);
             this.DireccionCliente.Name = "DireccionCliente";
-            this.DireccionCliente.Size = new System.Drawing.Size(100, 20);
+            this.DireccionCliente.Size = new System.Drawing.Size(412, 20);
             this.DireccionCliente.TabIndex = 8;
             // 
             // ListaCliente
             // 
             this.ListaCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaCliente.Location = new System.Drawing.Point(200, 73);
+            this.ListaCliente.Location = new System.Drawing.Point(128, 93);
             this.ListaCliente.Name = "ListaCliente";
-            this.ListaCliente.Size = new System.Drawing.Size(481, 220);
+            this.ListaCliente.Size = new System.Drawing.Size(541, 200);
             this.ListaCliente.TabIndex = 10;
             // 
             // ActualizarCliente
@@ -138,6 +141,7 @@
             this.ActualizarCliente.TabIndex = 11;
             this.ActualizarCliente.Text = "Actualizar";
             this.ActualizarCliente.UseVisualStyleBackColor = false;
+            this.ActualizarCliente.Click += new System.EventHandler(this.ActualizarCliente_Click);
             // 
             // Cliente
             // 

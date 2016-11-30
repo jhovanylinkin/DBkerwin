@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiTiendita
 {
-    class Clientes
+    public class Clientes
     {
         public int idCliente { get; set; }
         public string nombreCliente { get; set; }
