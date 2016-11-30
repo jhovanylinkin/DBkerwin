@@ -38,7 +38,9 @@
             this.NombreVenta = new System.Windows.Forms.TextBox();
             this.ListaVenta = new System.Windows.Forms.DataGridView();
             this.TotalVenta = new System.Windows.Forms.TextBox();
-            this.FechaVenta = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ListaVenta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 26);
+            this.label1.Location = new System.Drawing.Point(44, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 3;
@@ -94,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(228, 19);
+            this.label3.Location = new System.Drawing.Point(499, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 5;
@@ -102,7 +104,7 @@
             // 
             // NombreVenta
             // 
-            this.NombreVenta.Location = new System.Drawing.Point(94, 19);
+            this.NombreVenta.Location = new System.Drawing.Point(94, 16);
             this.NombreVenta.Name = "NombreVenta";
             this.NombreVenta.Size = new System.Drawing.Size(100, 20);
             this.NombreVenta.TabIndex = 6;
@@ -122,12 +124,28 @@
             this.TotalVenta.Size = new System.Drawing.Size(100, 20);
             this.TotalVenta.TabIndex = 9;
             // 
-            // FechaVenta
+            // dateTimePicker1
             // 
-            this.FechaVenta.Location = new System.Drawing.Point(271, 16);
-            this.FechaVenta.Name = "FechaVenta";
-            this.FechaVenta.Size = new System.Drawing.Size(100, 20);
-            this.FechaVenta.TabIndex = 10;
+            this.dateTimePicker1.Location = new System.Drawing.Point(546, 12);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 10;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(280, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(230, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "cantidad";
             // 
             // Ventas
             // 
@@ -135,7 +153,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(758, 375);
-            this.Controls.Add(this.FechaVenta);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.TotalVenta);
             this.Controls.Add(this.ListaVenta);
             this.Controls.Add(this.NombreVenta);
@@ -165,6 +185,8 @@
         private System.Windows.Forms.TextBox NombreVenta;
         private System.Windows.Forms.DataGridView ListaVenta;
         private System.Windows.Forms.TextBox TotalVenta;
-        private System.Windows.Forms.TextBox FechaVenta;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

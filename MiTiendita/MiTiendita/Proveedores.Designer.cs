@@ -40,9 +40,9 @@
             this.RFCProveedor = new System.Windows.Forms.TextBox();
             this.DireccionProveedor = new System.Windows.Forms.TextBox();
             this.TelefonoProveedor = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewProveedores = new System.Windows.Forms.DataGridView();
             this.ActualizarProveedor = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // AgregarProveedor
@@ -54,6 +54,7 @@
             this.AgregarProveedor.TabIndex = 0;
             this.AgregarProveedor.Text = "Agregar";
             this.AgregarProveedor.UseVisualStyleBackColor = false;
+            this.AgregarProveedor.Click += new System.EventHandler(this.AgregarProveedor_Click);
             // 
             // BuscarProveedor
             // 
@@ -64,6 +65,7 @@
             this.BuscarProveedor.TabIndex = 1;
             this.BuscarProveedor.Text = "Buscar";
             this.BuscarProveedor.UseVisualStyleBackColor = false;
+            this.BuscarProveedor.Click += new System.EventHandler(this.BuscarProveedor_Click);
             // 
             // BorrarProveedor
             // 
@@ -74,6 +76,7 @@
             this.BorrarProveedor.TabIndex = 2;
             this.BorrarProveedor.Text = "Borrar";
             this.BorrarProveedor.UseVisualStyleBackColor = false;
+            this.BorrarProveedor.Click += new System.EventHandler(this.BorrarProveedor_Click);
             // 
             // label1
             // 
@@ -139,13 +142,14 @@
             this.TelefonoProveedor.Size = new System.Drawing.Size(100, 20);
             this.TelefonoProveedor.TabIndex = 11;
             // 
-            // dataGridView1
+            // dataGridViewProveedores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 60);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(618, 239);
-            this.dataGridView1.TabIndex = 12;
+            this.dataGridViewProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProveedores.Location = new System.Drawing.Point(45, 60);
+            this.dataGridViewProveedores.Name = "dataGridViewProveedores";
+            this.dataGridViewProveedores.Size = new System.Drawing.Size(618, 239);
+            this.dataGridViewProveedores.TabIndex = 12;
+            this.dataGridViewProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProveedores_CellContentClick);
             // 
             // ActualizarProveedor
             // 
@@ -156,6 +160,7 @@
             this.ActualizarProveedor.TabIndex = 13;
             this.ActualizarProveedor.Text = "Actualizar";
             this.ActualizarProveedor.UseVisualStyleBackColor = false;
+            this.ActualizarProveedor.Click += new System.EventHandler(this.ActualizarProveedor_Click);
             // 
             // Proveedores
             // 
@@ -164,7 +169,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(747, 378);
             this.Controls.Add(this.ActualizarProveedor);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewProveedores);
             this.Controls.Add(this.TelefonoProveedor);
             this.Controls.Add(this.DireccionProveedor);
             this.Controls.Add(this.RFCProveedor);
@@ -178,7 +183,7 @@
             this.Controls.Add(this.AgregarProveedor);
             this.Name = "Proveedores";
             this.Text = "Proveedores";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProveedores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +202,7 @@
         private System.Windows.Forms.TextBox RFCProveedor;
         private System.Windows.Forms.TextBox DireccionProveedor;
         private System.Windows.Forms.TextBox TelefonoProveedor;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewProveedores;
         private System.Windows.Forms.Button ActualizarProveedor;
     }
 }
