@@ -90,6 +90,8 @@
     <Compile Include="Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProveedoresIME.cs" />
+    <Compile Include="Proveedoress.cs" />
     <Compile Include="Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
