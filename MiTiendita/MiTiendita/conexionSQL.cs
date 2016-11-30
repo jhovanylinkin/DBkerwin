@@ -12,8 +12,9 @@ namespace MiTiendita
         public static MySqlConnection obtenerConexion()
         {
             MySqlConnection conectar = new MySqlConnection("server=localhost; database=mydb; Uid=root; pwd=fundamentos;");
-            conectar.Open();
+            conectar.Open(); 
             return conectar;
+            //prueba del git
         }
     }
 }

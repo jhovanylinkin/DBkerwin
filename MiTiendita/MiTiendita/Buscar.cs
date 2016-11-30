@@ -24,12 +24,18 @@ namespace MiTiendita
         ////////////////////////////////////////////////////////////////////////////////////////
         private void Busca_Click(object sender, EventArgs e)
         {
-           
-                int integrarID;//conversion de string  int
+            if (string.IsNullOrWhiteSpace(ID.Text))
+            {
+
+                MessageBox.Show("El campo ID es obligatorio!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            { 
+            int integrarID;//conversion de string  int
                 integrarID = Convert.ToInt32(ID.Text);
                 integrarID = int.Parse(ID.Text);
                 dataGridViewBuscarProductos.DataSource = ProductosIME.BuscarProductos(integrarID, Nombre.Text);//Metodo parainiciar la usqueda
-           
+           }
             
         }
 
@@ -105,6 +111,18 @@ namespace MiTiendita
 
                 }
             }
+            else
+            {
+                MessageBox.Show("Por favor seleccione una fila!", "Seleccione  una fila!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
+        }
+
+        private void Inicio_Click(object sender, EventArgs e)
+        {
+            Principal i = new Principal();
+            i.Show();
+            this.Close();
         }
     }
 }

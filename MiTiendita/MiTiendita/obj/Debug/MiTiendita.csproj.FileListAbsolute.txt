@@ -24,3 +24,10 @@ C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\Mi
 C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.csproj.GenerateResource.Cache
 =======
 >>>>>>> refs/remotes/origin/master
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\bin\Debug\MiTiendita.exe.config
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.exe
+C:\Users\Mauricio Sak\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.pdb
+C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Cliente.resources
+C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Compras.resources
+C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Proveedores.resources
+C:\Users\bruno\Source\Repos\DBkerwin\DBkerwin\MiTiendita\MiTiendita\obj\Debug\MiTiendita.Ventas.resources
