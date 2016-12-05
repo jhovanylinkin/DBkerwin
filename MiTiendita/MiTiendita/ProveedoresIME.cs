@@ -68,7 +68,24 @@ namespace MiTiendita
             conexion.Close();
             return provProveedores;
         }
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public static List<Proveedoress> obtenerProveedoresName() {
 
+            List<Proveedoress> _NameProveedor = new List<Proveedoress>();
+            MySqlConnection conexion = conexionSQL.obtenerConexion();
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProveedor, nombreProveedor from proveedores"), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+           
+            while (_reader.Read())
+            {
+                Proveedoress provProveedores = new Proveedoress();
+                provProveedores.idProveedor = _reader.GetInt32(0);
+                provProveedores.nombreProveedor = _reader.GetString(1);
+                _NameProveedor.Add(provProveedores);
+            }
+            conexion.Close();
+            return _NameProveedor;
+        }
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public static int ActualizarProveedor(Proveedoress provProveedores)//Metodo Actualizar

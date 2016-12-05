@@ -66,7 +66,25 @@ namespace MiTiendita
             conexion.Close();
             return clClientes;
         }
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public static List<Clientes> obtenerclientesName()
+        {
 
+            List<Clientes> _NameClientes = new List<Clientes>();
+            MySqlConnection conexion = conexionSQL.obtenerConexion();
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idCliente, nombreCliente from cliente"), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+
+            while (_reader.Read())
+            {
+                Clientes cliClientes = new Clientes();
+                cliClientes.idCliente = _reader.GetInt32(0);
+                cliClientes.nombreCliente = _reader.GetString(1);
+                _NameClientes.Add(cliClientes);
+            }
+            conexion.Close();
+            return _NameClientes;
+        }
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public static int ActualizarCliente(Clientes clClientes)//Metodo Actualizar

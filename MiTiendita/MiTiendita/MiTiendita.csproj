@@ -73,6 +73,8 @@
     <Compile Include="Compras.Designer.cs">
       <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComprasC.cs" />
+    <Compile Include="ComprasIME.cs" />
     <Compile Include="conexionSQL.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -98,6 +100,8 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentasIME.cs" />
+    <Compile Include="ventass.cs" />
     <EmbeddedResource Include="Agregar.resx">
       <DependentUpon>Agregar.cs</DependentUpon>
     </EmbeddedResource>

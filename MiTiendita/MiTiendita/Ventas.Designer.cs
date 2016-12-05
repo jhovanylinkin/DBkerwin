@@ -35,12 +35,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.NombreVenta = new System.Windows.Forms.TextBox();
             this.ListaVenta = new System.Windows.Forms.DataGridView();
             this.TotalVenta = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxNombreVentas = new System.Windows.Forms.ComboBox();
+            this.comboBoxClienteventas = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ColumnIDVentas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTTV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnidCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIDProduco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columnproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ButtonVender = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListaVenta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,17 +111,17 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Fecha";
             // 
-            // NombreVenta
-            // 
-            this.NombreVenta.Location = new System.Drawing.Point(94, 16);
-            this.NombreVenta.Name = "NombreVenta";
-            this.NombreVenta.Size = new System.Drawing.Size(100, 20);
-            this.NombreVenta.TabIndex = 6;
-            // 
             // ListaVenta
             // 
             this.ListaVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListaVenta.Location = new System.Drawing.Point(34, 87);
+            this.ListaVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnIDVentas,
+            this.ColumnTTV,
+            this.ColumnFecha,
+            this.ColumnidCliente,
+            this.ColumnIDProduco,
+            this.Columnproducto});
+            this.ListaVenta.Location = new System.Drawing.Point(55, 90);
             this.ListaVenta.Name = "ListaVenta";
             this.ListaVenta.Size = new System.Drawing.Size(691, 214);
             this.ListaVenta.TabIndex = 7;
@@ -147,18 +156,88 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "cantidad";
             // 
+            // comboBoxNombreVentas
+            // 
+            this.comboBoxNombreVentas.FormattingEnabled = true;
+            this.comboBoxNombreVentas.Location = new System.Drawing.Point(94, 18);
+            this.comboBoxNombreVentas.Name = "comboBoxNombreVentas";
+            this.comboBoxNombreVentas.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxNombreVentas.TabIndex = 13;
+            this.comboBoxNombreVentas.SelectedIndexChanged += new System.EventHandler(this.comboBoxNombreVentas_SelectedIndexChanged);
+            // 
+            // comboBoxClienteventas
+            // 
+            this.comboBoxClienteventas.FormattingEnabled = true;
+            this.comboBoxClienteventas.Location = new System.Drawing.Point(280, 60);
+            this.comboBoxClienteventas.Name = "comboBoxClienteventas";
+            this.comboBoxClienteventas.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxClienteventas.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(230, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Cliente";
+            // 
+            // ColumnIDVentas
+            // 
+            this.ColumnIDVentas.HeaderText = "IDVentas";
+            this.ColumnIDVentas.Name = "ColumnIDVentas";
+            // 
+            // ColumnTTV
+            // 
+            this.ColumnTTV.HeaderText = "TotalVenta";
+            this.ColumnTTV.Name = "ColumnTTV";
+            // 
+            // ColumnFecha
+            // 
+            this.ColumnFecha.HeaderText = "Fecha";
+            this.ColumnFecha.Name = "ColumnFecha";
+            // 
+            // ColumnidCliente
+            // 
+            this.ColumnidCliente.HeaderText = "ID Cliente";
+            this.ColumnidCliente.Name = "ColumnidCliente";
+            // 
+            // ColumnIDProduco
+            // 
+            this.ColumnIDProduco.HeaderText = "ID Producto";
+            this.ColumnIDProduco.Name = "ColumnIDProduco";
+            // 
+            // Columnproducto
+            // 
+            this.Columnproducto.HeaderText = "Producto";
+            this.Columnproducto.Name = "Columnproducto";
+            // 
+            // ButtonVender
+            // 
+            this.ButtonVender.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ButtonVender.Location = new System.Drawing.Point(633, 340);
+            this.ButtonVender.Name = "ButtonVender";
+            this.ButtonVender.Size = new System.Drawing.Size(75, 23);
+            this.ButtonVender.TabIndex = 16;
+            this.ButtonVender.Text = "Vender";
+            this.ButtonVender.UseVisualStyleBackColor = false;
+            this.ButtonVender.Click += new System.EventHandler(this.ButtonVender_Click);
+            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(758, 375);
+            this.Controls.Add(this.ButtonVender);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.comboBoxClienteventas);
+            this.Controls.Add(this.comboBoxNombreVentas);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.TotalVenta);
             this.Controls.Add(this.ListaVenta);
-            this.Controls.Add(this.NombreVenta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -182,11 +261,20 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox NombreVenta;
         private System.Windows.Forms.DataGridView ListaVenta;
         private System.Windows.Forms.TextBox TotalVenta;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxNombreVentas;
+        private System.Windows.Forms.ComboBox comboBoxClienteventas;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIDVentas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTTV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnidCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIDProduco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columnproducto;
+        private System.Windows.Forms.Button ButtonVender;
     }
 }
