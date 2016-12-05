@@ -25,6 +25,7 @@ namespace MiTiendita
 
         private void Guardar_Click(object sender, EventArgs e)
         {
+            /*
             if (string.IsNullOrWhiteSpace(IDAgregar.Text) || string.IsNullOrWhiteSpace(NombreAgregar.Text) ||
                             string.IsNullOrWhiteSpace(UnidadAgregar.Text)||string.IsNullOrWhiteSpace(PrecioAgregar.Text)|| string.IsNullOrWhiteSpace(CantidadCantidad.Text))
 
@@ -64,7 +65,7 @@ namespace MiTiendita
                 }
 
 
-            }
+            }*/
         }
 
         private void IDAgregar_TextChanged(object sender, EventArgs e)

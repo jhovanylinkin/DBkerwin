@@ -50,7 +50,7 @@ namespace MiTiendita
         }
 
         ///////////////////////////////////////////////////////////////////////////////
-        public Productos productoSeleccionado { get; set; }
+        public Productos productoSeleccionado { get; set;}
         private void Borrar_Click(object sender, EventArgs e)
         {
             if (dataGridViewBuscarProductos.SelectedRows.Count == 1)

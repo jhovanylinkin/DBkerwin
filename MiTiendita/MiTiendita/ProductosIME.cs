@@ -10,9 +10,10 @@ namespace MiTiendita
 {
     class ProductosIME
     {
-        public static int AgregarProductos(Productos pProductos) //Funcion Agregar a Consola
+        public static int AgregarProductos(Productos pProductos, ComprasC compCompras) //Funcion Agregar a Consola
         {
             int retorno = 0;
+            
             try
             {
                 MySqlCommand comando = new MySqlCommand(string.Format("Insert into producto (idProducto,nombre,unidades,precio,pieza) values ('{0}','{1}','{2}', '{3}','{4}')",
@@ -23,8 +24,25 @@ namespace MiTiendita
             catch { return 0; }
         }
        
+   
+        public static int AgregarCompras(Productos pProductos, ComprasC compCompras, Proveedoress provProveedores) {
+            int retorno2 = 0;
+            try
+            {
+                MySqlCommand comandoCompras = new MySqlCommand(string.Format("Insert into compras (idcompras,totalCompras,fechaCompras,idProveedor,Producto_idProducto) values ('{0}','{1}','{2}','{3}','{4}')",
+               compCompras.idcompras, compCompras.totalCompras, compCompras.fechaCompras, provProveedores.idProveedor,pProductos.idProducto), conexionSQL.obtenerConexion());
+                retorno2 = comandoCompras.ExecuteNonQuery();
+                return retorno2;
+                
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+       
  
-        public static List<Productos> BuscarProductos(int pId, string pNombre)//Metodo que busca los productos
+        public static List<Productos> BuscarProductos(int pId,string pNombre)//Metodo que busca los productos
         {
 
             List<Productos> _listaProductos = new List<Productos>();
@@ -45,6 +63,26 @@ namespace MiTiendita
             }
             return _listaProductos;
 
+        }
+        public static List<Productos> BuscarProductosSinID(string pNombre)//Busca sin nececidad del ID
+        {
+            List<Productos> _listaProductos = new List<Productos>();
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto,nombre,unidades,precio, pieza FROM producto where nombre='{0}'", pNombre), conexionSQL.obtenerConexion());
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                Productos pProductos = new Productos();
+
+                pProductos.idProducto = _reader.GetInt32(0);
+                pProductos.nombre = _reader.GetString(1);
+                pProductos.unidanes = _reader.GetString(2);
+                pProductos.precio = _reader.GetDouble(3);
+                pProductos.pieza = _reader.GetInt32(4);
+
+
+                _listaProductos.Add(pProductos);
+            }
+            return _listaProductos;
         }
         
         /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -68,7 +106,25 @@ namespace MiTiendita
             conexion.Close();
             return pProductos;
         }
-        
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public static List<Productos> obtenerProductosName()
+        {
+
+            List<Productos> _NameProductos = new List<Productos>();
+            MySqlConnection conexion = conexionSQL.obtenerConexion();
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto, nombre from producto"), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+
+            while (_reader.Read())
+            {
+                Productos pProductos = new Productos();
+                pProductos.idProducto = _reader.GetInt32(0);
+                pProductos.nombre = _reader.GetString(1);
+                _NameProductos.Add(pProductos);
+            }
+            conexion.Close();
+            return _NameProductos;
+        }
         //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public static int ActualizarProducto(Productos pProductos)//Metodo Actualizar
@@ -99,6 +155,7 @@ namespace MiTiendita
 
 
         }
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
 
     }
