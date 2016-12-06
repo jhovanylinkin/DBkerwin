@@ -76,6 +76,7 @@
     <Compile Include="ComprasC.cs" />
     <Compile Include="ComprasIME.cs" />
     <Compile Include="conexionSQL.cs" />
+    <Compile Include="listCompras.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
