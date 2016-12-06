@@ -28,18 +28,18 @@ namespace MiTiendita
         private void BuscarCompra_Click(object sender, EventArgs e)
         {
             
-            if (string.IsNullOrWhiteSpace(NombreCompra.Text))
+            if (string.IsNullOrWhiteSpace(idProductoCompras.Text))
             {
 
-                MessageBox.Show("El campo Nombre es obligatorio!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El campo ID produto es obligatorio!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
                 ListaCompra.Columns.Clear();
                 ListaCompra.Refresh();
 
-                ListaCompra.DataSource = ProductosIME.BuscarProductosSinID(NombreCompra.Text);//Metodo parainiciar la usqueda
-                string precio = Convert.ToString(ListaCompra.CurrentRow.Cells[3].Value);
+                ListaCompra.DataSource = ComprasIME.BuscarProductosPARACOMPRAS(idProductoCompras.Text);//Metodo parainiciar la usqueda
+                string precio = Convert.ToString(ListaCompra.CurrentRow.Cells[7].Value);
                 TotalCompra.Text = precio;
                 PrecioCompra.Text = precio;
             }
@@ -65,28 +65,29 @@ namespace MiTiendita
         {
 
         }
+        public string idCompra;
+        public string idProducto;
+        public string nombre;
+        public string unidades;
+        public double precio;
+        public int cantidad;
+        public string idproveedor;
+        public string proveedor;
+        public double total;
+        public string fecha;
+
 
         private void AgregarCompra_Click(object sender, EventArgs e)
         {
-            string idCompra;
             idCompra = comboBoxIDCompra.Text;
-            string idProducto;
             idProducto = idProductoCompras.Text;
-            string nombre;
             nombre = NombreCompra.Text;
-            string unidades;
             unidades = UnidadCompras.Text;
-            double precio;
             precio = double.Parse(PrecioCompra.Text);
-            int cantidad;
             cantidad = int.Parse(CantidadCompra.Text);
-            string idproveedor;
             idproveedor = Convert.ToString(comboBoxProveedor.SelectedValue);
-            string proveedor;
             proveedor = comboBoxProveedor.Text;
-            double total;
             total = double.Parse(TotalCompra.Text);
-            string fecha;
             fecha= fechaCompras.Value.Year + "/" + fechaCompras.Value.Month + "/" + fechaCompras.Value.Day;
 
 
@@ -244,6 +245,60 @@ namespace MiTiendita
         }
 
         private void comboBoxIDCompra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
+        public Productos compraSeleccionada { get; set; }
+        private void ActualizarCompra_Click(object sender, EventArgs e)
+        {
+            if (ListaCompra.SelectedRows.Count == 1)
+            {
+                Productos pProductos = new Productos();
+                ComprasC compCompras = new ComprasC();
+                Proveedoress provProveedores = new Proveedoress();
+
+                int idCompra = Convert.ToInt32(ListaCompra.CurrentRow.Cells[0].Value);
+                int idProducto = Convert.ToInt32(ListaCompra.CurrentRow.Cells[1].Value);
+                string nombre = Convert.ToString(ListaCompra.CurrentRow.Cells[2].Value);
+                string unidades = Convert.ToString(ListaCompra.CurrentRow.Cells[3].Value);
+                double precio = Convert.ToDouble(ListaCompra.CurrentRow.Cells[4].Value);
+                int cantidad = Convert.ToInt32(ListaCompra.CurrentRow.Cells[5].Value);
+                int idProveedor = Convert.ToInt32(ListaCompra.CurrentRow.Cells[6].Value);
+                double total = Convert.ToDouble(ListaCompra.CurrentRow.Cells[7].Value);
+                string fecha = Convert.ToString(ListaCompra.CurrentRow.Cells[8].Value);
+
+                double op = cantidad * precio;
+
+                compCompras.idcompras = idCompra;
+                pProductos.idProducto = idProducto;
+                pProductos.nombre = nombre;
+                pProductos.unidanes = unidades;
+                pProductos.precio = precio;
+                compCompras.cantidad = cantidad;
+                provProveedores.idProveedor = idProveedor;
+                compCompras.totalCompras = op;
+                compCompras.fechaCompras = fecha;
+
+
+
+                if (ComprasIME.ActualizarCompra(compCompras,pProductos,provProveedores) > 0)
+                {
+                    MessageBox.Show("Los datos del Producto se actualizaron", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar", "Error al Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione una fila!", "Seleccione  una fila!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        //---------------------------------------------------------------------------------------------------------------------------------------------------
+        private void idProductoCompras_TextChanged(object sender, EventArgs e)
         {
 
         }

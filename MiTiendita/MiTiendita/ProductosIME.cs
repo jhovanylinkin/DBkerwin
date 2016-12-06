@@ -60,6 +60,7 @@ namespace MiTiendita
 
             List<Productos> _listaProductos = new List<Productos>();
             MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto,nombre,unidades,precio FROM producto where idProducto='{0}' or nombre='{1}'", pId, pNombre), conexionSQL.obtenerConexion());
+
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {
@@ -96,6 +97,8 @@ namespace MiTiendita
             }
             return _listaProductos;
         }
+        //////////////////////////////////////////////////////////////////////////////////////////////////////Metodo PARA BUSCAR Y MANDAR LOS DATOS EN ORDEN AL DATAgrIDvIEW
+       
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////
         public static Productos ObtenerProductos(int pId)//Metodo ObtenerProductos
@@ -103,7 +106,7 @@ namespace MiTiendita
             Productos pProductos = new Productos();
             MySqlConnection conexion = conexionSQL.obtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto, nombre, unidades,precio FROM producto where idProducto={0}", pId),conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT idProducto, nombre, unidades,precio FROM producto where idProducto='{0}'", pId),conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
             while (_reader.Read())
             {

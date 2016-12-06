@@ -62,12 +62,12 @@ namespace MiTiendita
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            abrircconeccion();
+            
         }
 
         private void Desconectar_Click(object sender, EventArgs e)
         {
-            cerrarconeccion();
+            
         }
 
         private void Principal_Load(object sender, EventArgs e)

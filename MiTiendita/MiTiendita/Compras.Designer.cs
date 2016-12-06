@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Compras));
             this.AgregarCompra = new System.Windows.Forms.Button();
             this.BuscarCompra = new System.Windows.Forms.Button();
-            this.BorrarCompra = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -89,17 +88,6 @@
             this.BuscarCompra.Text = "Buscar";
             this.BuscarCompra.UseVisualStyleBackColor = false;
             this.BuscarCompra.Click += new System.EventHandler(this.BuscarCompra_Click);
-            // 
-            // BorrarCompra
-            // 
-            this.BorrarCompra.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BorrarCompra.Location = new System.Drawing.Point(177, 334);
-            this.BorrarCompra.Name = "BorrarCompra";
-            this.BorrarCompra.Size = new System.Drawing.Size(75, 23);
-            this.BorrarCompra.TabIndex = 2;
-            this.BorrarCompra.Text = "Borrar";
-            this.BorrarCompra.UseVisualStyleBackColor = false;
-            this.BorrarCompra.Click += new System.EventHandler(this.BorrarCompra_Click);
             // 
             // label1
             // 
@@ -254,13 +242,14 @@
             // ActualizarCompra
             // 
             this.ActualizarCompra.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ActualizarCompra.Location = new System.Drawing.Point(258, 334);
+            this.ActualizarCompra.Location = new System.Drawing.Point(771, 334);
             this.ActualizarCompra.Name = "ActualizarCompra";
             this.ActualizarCompra.Size = new System.Drawing.Size(75, 23);
             this.ActualizarCompra.TabIndex = 15;
             this.ActualizarCompra.Text = "Actualizar";
             this.ActualizarCompra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ActualizarCompra.UseVisualStyleBackColor = false;
+            this.ActualizarCompra.Click += new System.EventHandler(this.ActualizarCompra_Click);
             // 
             // fechaCompras
             // 
@@ -337,6 +326,7 @@
             this.idProductoCompras.Name = "idProductoCompras";
             this.idProductoCompras.Size = new System.Drawing.Size(110, 20);
             this.idProductoCompras.TabIndex = 25;
+            this.idProductoCompras.TextChanged += new System.EventHandler(this.idProductoCompras_TextChanged);
             // 
             // label7
             // 
@@ -394,7 +384,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Total);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BorrarCompra);
             this.Controls.Add(this.BuscarCompra);
             this.Controls.Add(this.AgregarCompra);
             this.Name = "Compras";
@@ -410,7 +399,6 @@
 
         private System.Windows.Forms.Button AgregarCompra;
         private System.Windows.Forms.Button BuscarCompra;
-        private System.Windows.Forms.Button BorrarCompra;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Total;
         private System.Windows.Forms.Label label3;
