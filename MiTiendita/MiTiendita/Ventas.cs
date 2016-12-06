@@ -86,7 +86,7 @@ namespace MiTiendita
                
 
                 int resultado = VentasIME.AgregarProductos(vVentas,cClientes, pProductos);
-                int resultado2 = ProductosIME.AgregarCompras(pProductos, compCompras, provProveedores);
+                //int resultado2 = ProductosIME.AgregarCompras(pProductos, compCompras, provProveedores);
                 if (resultado > 0 )
                 {
                     MessageBox.Show("Productos registrados con exito ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);

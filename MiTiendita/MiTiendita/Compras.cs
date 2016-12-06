@@ -194,23 +194,25 @@ namespace MiTiendita
                 string proveedor = Convert.ToString(ListaCompra.CurrentRow.Cells[7].Value);
                 int total = Convert.ToInt32(ListaCompra.CurrentRow.Cells[8].Value);
                 string fecha = Convert.ToString(ListaCompra.CurrentRow.Cells[9].Value);
+
                 compCompras.idcompras = idCompra;
                 pProductos.idProducto = idProducto;
                 pProductos.nombre = nombre;
                 pProductos.unidanes = unidades;
                 pProductos.precio = precio;
-                pProductos.pieza = cantidad;
+                compCompras.cantidad = cantidad;
                 provProveedores.idProveedor = idProveedor;
                 compCompras.totalCompras = total;
                 compCompras.fechaCompras = fecha;
 
-                //pProductos.Fecha_Nacimiento = dateTimePicker1.Value.Year + "/" + dateTimePicker1.Value.Month + "/" + dateTimePicker1.Value.Day;
 
 
 
-                int resultado = ProductosIME.AgregarProductos(pProductos, compCompras);
-                int resultado2 = ProductosIME.AgregarCompras(pProductos, compCompras, provProveedores);
-                if (resultado > 0 && resultado2 >0)
+                int resultado = ProductosIME.AgregarCompras(compCompras, provProveedores);
+                int resultado2 = ProductosIME.AgregarProductos(pProductos);
+                int resultado3 = ProductosIME.AgregarProductos_has_Compras(pProductos,compCompras); ;
+                
+                if (resultado > 0 && resultado2 >0 && resultado3 >0)
                 {
                     MessageBox.Show("Productos registrados con exito ", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

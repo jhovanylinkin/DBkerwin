@@ -42,6 +42,16 @@
             this.Precio = new System.Windows.Forms.Label();
             this.PrecioCompra = new System.Windows.Forms.TextBox();
             this.ListaCompra = new System.Windows.Forms.DataGridView();
+            this.ColumnIDCompraa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnIDProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActualizarCompra = new System.Windows.Forms.Button();
             this.fechaCompras = new System.Windows.Forms.DateTimePicker();
             this.comboBoxProveedor = new System.Windows.Forms.ComboBox();
@@ -55,16 +65,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxIDCompra = new System.Windows.Forms.ComboBox();
-            this.ColumnIDCompraa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnUnidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnIDProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ListaCompra)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,11 +195,61 @@
             this.ColumnProveedor,
             this.ColumnTotal,
             this.ColumnFecha});
-            this.ListaCompra.Location = new System.Drawing.Point(62, 76);
+            this.ListaCompra.Location = new System.Drawing.Point(3, 76);
             this.ListaCompra.Name = "ListaCompra";
             this.ListaCompra.Size = new System.Drawing.Size(1039, 220);
             this.ListaCompra.TabIndex = 14;
             this.ListaCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaCompra_CellContentClick);
+            // 
+            // ColumnIDCompraa
+            // 
+            this.ColumnIDCompraa.HeaderText = "ID Compra";
+            this.ColumnIDCompraa.Name = "ColumnIDCompraa";
+            // 
+            // ColumnIDProducto
+            // 
+            this.ColumnIDProducto.HeaderText = "ID Producto";
+            this.ColumnIDProducto.Name = "ColumnIDProducto";
+            // 
+            // ColumnNombre
+            // 
+            this.ColumnNombre.HeaderText = "Nombre";
+            this.ColumnNombre.Name = "ColumnNombre";
+            // 
+            // ColumnUnidades
+            // 
+            this.ColumnUnidades.HeaderText = "Unidad";
+            this.ColumnUnidades.Name = "ColumnUnidades";
+            // 
+            // ColumnPrecio
+            // 
+            this.ColumnPrecio.HeaderText = "Precio";
+            this.ColumnPrecio.Name = "ColumnPrecio";
+            // 
+            // ColumnCantidad
+            // 
+            this.ColumnCantidad.HeaderText = "Cantidad";
+            this.ColumnCantidad.Name = "ColumnCantidad";
+            // 
+            // ColumnIDProveedor
+            // 
+            this.ColumnIDProveedor.HeaderText = "ID Proveedor";
+            this.ColumnIDProveedor.Name = "ColumnIDProveedor";
+            // 
+            // ColumnProveedor
+            // 
+            this.ColumnProveedor.HeaderText = "Proveedor";
+            this.ColumnProveedor.Name = "ColumnProveedor";
+            // 
+            // ColumnTotal
+            // 
+            this.ColumnTotal.HeaderText = "Total";
+            this.ColumnTotal.Name = "ColumnTotal";
+            // 
+            // ColumnFecha
+            // 
+            this.ColumnFecha.HeaderText = "Fecha";
+            this.ColumnFecha.Name = "ColumnFecha";
             // 
             // ActualizarCompra
             // 
@@ -309,61 +359,11 @@
             // comboBoxIDCompra
             // 
             this.comboBoxIDCompra.FormattingEnabled = true;
-            this.comboBoxIDCompra.Location = new System.Drawing.Point(571, 46);
+            this.comboBoxIDCompra.Location = new System.Drawing.Point(580, 46);
             this.comboBoxIDCompra.Name = "comboBoxIDCompra";
             this.comboBoxIDCompra.Size = new System.Drawing.Size(91, 21);
             this.comboBoxIDCompra.TabIndex = 29;
             this.comboBoxIDCompra.SelectedIndexChanged += new System.EventHandler(this.comboBoxIDCompra_SelectedIndexChanged);
-            // 
-            // ColumnIDCompraa
-            // 
-            this.ColumnIDCompraa.HeaderText = "ID Compra";
-            this.ColumnIDCompraa.Name = "ColumnIDCompraa";
-            // 
-            // ColumnIDProducto
-            // 
-            this.ColumnIDProducto.HeaderText = "ID Producto";
-            this.ColumnIDProducto.Name = "ColumnIDProducto";
-            // 
-            // ColumnNombre
-            // 
-            this.ColumnNombre.HeaderText = "Nombre";
-            this.ColumnNombre.Name = "ColumnNombre";
-            // 
-            // ColumnUnidades
-            // 
-            this.ColumnUnidades.HeaderText = "Unidad";
-            this.ColumnUnidades.Name = "ColumnUnidades";
-            // 
-            // ColumnPrecio
-            // 
-            this.ColumnPrecio.HeaderText = "Precio";
-            this.ColumnPrecio.Name = "ColumnPrecio";
-            // 
-            // ColumnCantidad
-            // 
-            this.ColumnCantidad.HeaderText = "Cantidad";
-            this.ColumnCantidad.Name = "ColumnCantidad";
-            // 
-            // ColumnIDProveedor
-            // 
-            this.ColumnIDProveedor.HeaderText = "ID Proveedor";
-            this.ColumnIDProveedor.Name = "ColumnIDProveedor";
-            // 
-            // ColumnProveedor
-            // 
-            this.ColumnProveedor.HeaderText = "Proveedor";
-            this.ColumnProveedor.Name = "ColumnProveedor";
-            // 
-            // ColumnTotal
-            // 
-            this.ColumnTotal.HeaderText = "Total";
-            this.ColumnTotal.Name = "ColumnTotal";
-            // 
-            // ColumnFecha
-            // 
-            this.ColumnFecha.HeaderText = "Fecha";
-            this.ColumnFecha.Name = "ColumnFecha";
             // 
             // Compras
             // 

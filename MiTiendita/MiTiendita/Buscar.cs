@@ -98,7 +98,7 @@ namespace MiTiendita
                 pProductos.nombre = nombre;
                 pProductos.unidanes = unidades;
                 pProductos.precio = precio;
-                pProductos.pieza = pieza;
+                
 
 
                 if (ProductosIME.ActualizarProducto(pProductos) > 0)

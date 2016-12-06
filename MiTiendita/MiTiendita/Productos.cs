@@ -12,12 +12,12 @@ namespace MiTiendita
         public string nombre { get; set; }
         public string unidanes { get; set; }
         public double precio { get; set; }
-        public int pieza { get; set; }
+        
 
 
         public Productos(){ }
 
-        public Productos(int pId, string pNombre, string pUnidades, double pPrecio, int pPieza)
+        public Productos(int pId, string pNombre, string pUnidades, double pPrecio)
 
         {
             
@@ -25,7 +25,7 @@ namespace MiTiendita
             this.nombre = pNombre;
             this.unidanes = pUnidades;
             this.precio = pPrecio;
-            this.pieza = pPieza;
+            
         } 
     
     }
