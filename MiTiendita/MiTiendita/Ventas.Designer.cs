@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventas));
             this.AgregarVenta = new System.Windows.Forms.Button();
             this.BuscarVenta = new System.Windows.Forms.Button();
-            this.BorrarVenta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,13 +42,16 @@
             this.comboBoxNombreVentas = new System.Windows.Forms.ComboBox();
             this.comboBoxClienteventas = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ButtonVender = new System.Windows.Forms.Button();
+            this.CBUltimaVenta = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.ColumnIDVentas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTTV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnidCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnIDProduco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Columnproducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ButtonVender = new System.Windows.Forms.Button();
+            this.ColumnCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ListaVenta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,16 +75,7 @@
             this.BuscarVenta.TabIndex = 1;
             this.BuscarVenta.Text = "Buscar";
             this.BuscarVenta.UseVisualStyleBackColor = false;
-            // 
-            // BorrarVenta
-            // 
-            this.BorrarVenta.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BorrarVenta.Location = new System.Drawing.Point(251, 341);
-            this.BorrarVenta.Name = "BorrarVenta";
-            this.BorrarVenta.Size = new System.Drawing.Size(75, 23);
-            this.BorrarVenta.TabIndex = 2;
-            this.BorrarVenta.Text = "Borrar";
-            this.BorrarVenta.UseVisualStyleBackColor = false;
+            this.BuscarVenta.Click += new System.EventHandler(this.BuscarVenta_Click);
             // 
             // label1
             // 
@@ -120,10 +113,11 @@
             this.ColumnFecha,
             this.ColumnidCliente,
             this.ColumnIDProduco,
-            this.Columnproducto});
+            this.Columnproducto,
+            this.ColumnCantidad});
             this.ListaVenta.Location = new System.Drawing.Point(55, 90);
             this.ListaVenta.Name = "ListaVenta";
-            this.ListaVenta.Size = new System.Drawing.Size(691, 214);
+            this.ListaVenta.Size = new System.Drawing.Size(741, 214);
             this.ListaVenta.TabIndex = 7;
             // 
             // TotalVenta
@@ -182,6 +176,34 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Cliente";
             // 
+            // ButtonVender
+            // 
+            this.ButtonVender.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ButtonVender.Location = new System.Drawing.Point(633, 340);
+            this.ButtonVender.Name = "ButtonVender";
+            this.ButtonVender.Size = new System.Drawing.Size(75, 23);
+            this.ButtonVender.TabIndex = 16;
+            this.ButtonVender.Text = "Vender";
+            this.ButtonVender.UseVisualStyleBackColor = false;
+            this.ButtonVender.Click += new System.EventHandler(this.ButtonVender_Click);
+            // 
+            // CBUltimaVenta
+            // 
+            this.CBUltimaVenta.FormattingEnabled = true;
+            this.CBUltimaVenta.Location = new System.Drawing.Point(625, 38);
+            this.CBUltimaVenta.Name = "CBUltimaVenta";
+            this.CBUltimaVenta.Size = new System.Drawing.Size(121, 21);
+            this.CBUltimaVenta.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(553, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Ultima venta";
+            // 
             // ColumnIDVentas
             // 
             this.ColumnIDVentas.HeaderText = "IDVentas";
@@ -212,23 +234,19 @@
             this.Columnproducto.HeaderText = "Producto";
             this.Columnproducto.Name = "Columnproducto";
             // 
-            // ButtonVender
+            // ColumnCantidad
             // 
-            this.ButtonVender.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ButtonVender.Location = new System.Drawing.Point(633, 340);
-            this.ButtonVender.Name = "ButtonVender";
-            this.ButtonVender.Size = new System.Drawing.Size(75, 23);
-            this.ButtonVender.TabIndex = 16;
-            this.ButtonVender.Text = "Vender";
-            this.ButtonVender.UseVisualStyleBackColor = false;
-            this.ButtonVender.Click += new System.EventHandler(this.ButtonVender_Click);
+            this.ColumnCantidad.HeaderText = "Cantidad";
+            this.ColumnCantidad.Name = "ColumnCantidad";
             // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(758, 375);
+            this.ClientSize = new System.Drawing.Size(837, 375);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.CBUltimaVenta);
             this.Controls.Add(this.ButtonVender);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBoxClienteventas);
@@ -241,7 +259,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BorrarVenta);
             this.Controls.Add(this.BuscarVenta);
             this.Controls.Add(this.AgregarVenta);
             this.Name = "Ventas";
@@ -257,7 +274,6 @@
 
         private System.Windows.Forms.Button AgregarVenta;
         private System.Windows.Forms.Button BuscarVenta;
-        private System.Windows.Forms.Button BorrarVenta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -269,12 +285,15 @@
         private System.Windows.Forms.ComboBox comboBoxNombreVentas;
         private System.Windows.Forms.ComboBox comboBoxClienteventas;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button ButtonVender;
+        private System.Windows.Forms.ComboBox CBUltimaVenta;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIDVentas;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTTV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnidCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIDProduco;
         private System.Windows.Forms.DataGridViewTextBoxColumn Columnproducto;
-        private System.Windows.Forms.Button ButtonVender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCantidad;
     }
 }
